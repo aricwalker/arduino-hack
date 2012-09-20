@@ -26,13 +26,18 @@ def write_serial(command, hue, sat, brt)
 end
 
 def glowValue(x)
-  value = (-240 * Math.sin(x * 0.01).abs ) + 255
-  console.log(value)
-  return value
+  value = (-98 * Math.sin(x * 0.01).abs ) + 100
+  # puts value
+  value
 end
 
+color = '8B1BE0'
+redC = color[0..1].to_i
+greenC = color[2..3].to_i
+blueC = color[4..5].to_i
+hue = 345
+sat = 80
 
-while true
+x = 0
 
-
-end
+write_serial('p', hue, sat, 20)
