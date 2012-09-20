@@ -26,7 +26,7 @@ def write_serial(command, hue, sat, brt)
 end
 
 def glowValue(x)
-  value = (-240 * Math.abs( Math.sin(x * 0.01))) + 255
+  value = (-240 * Math.sin(x * 0.01).abs ) + 255
   console.log(value)
   return value
 end
